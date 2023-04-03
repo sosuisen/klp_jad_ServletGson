@@ -32,7 +32,7 @@ public class Resources extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String title = request.getParameter("title");
 		
-		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("application/json");
 		PrintWriter out = response.getWriter();
 		var todo = new ToDo(title, LocalDate.now().toString(), false);
 		out.println(gson.toJson(todo));
